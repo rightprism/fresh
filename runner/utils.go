@@ -24,7 +24,7 @@ func isTmpDir(path string) bool {
 }
 
 func isIgnoredFolder(path string) bool {
-	watcherLog("path: %v", path)
+	//watcherLog("path: %v", path)
 	paths := strings.Split(path, "/")
 	if len(paths) <= 0 {
 		return false
