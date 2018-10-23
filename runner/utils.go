@@ -30,7 +30,8 @@ func isIgnoredFolder(path string) bool {
 	}
 
 	for _, e := range strings.Split(settings["ignored"], ",") {
-		if strings.TrimSpace(e) == paths[0] {
+		//if strings.TrimSpace(e) == paths[0] {
+		if strings.HasPrefix(path, strings.TrimSpace(e)) {	
 			return true
 		}
 	}
